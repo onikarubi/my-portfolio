@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
-import Header from '@/components/Header'
+import Header from '@/components/templates/Header'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -18,14 +18,18 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <head>
-        {/* ここに追加のメタタグやフォントのリンクを含めることができます */}
+        <meta charSet="utf-8" />
+        <meta name="description" content="portfolio" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Takeuchi My portfolio</title>
+        <link rel="icon" href="/favicon.ico" />
       </head>
       <body className={`${inter.className} bg-blue-50 text-gray-800`}>
         <Header />
-        <main className="container mx-auto px-4 py-8 min-h-screen">
+        <main className="mx-auto py-8 min-h-screen">
           {children}
         </main>
-        <footer className="py-4 text-center border-t mt-8 bg-blue-200 text-blue-800">
+        <footer className="py-4 text-center border-t mt-8 bg-white text-black">
           © 2023 Takeuchi Portfolio. All rights reserved.
         </footer>
       </body>

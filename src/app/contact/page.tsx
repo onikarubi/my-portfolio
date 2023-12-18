@@ -3,7 +3,7 @@
 import React from 'react'
 import dynamic from 'next/dynamic'
 
-const ContactForm = dynamic(() => import('@/components/ContactForm'), { ssr: false })
+const ContactForm = dynamic(() => import('@/components/contact/ContactForm'), { ssr: false })
 
 const page = () => {
   return (
