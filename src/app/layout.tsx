@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
-import Header from '@/components/templates/Header'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -25,13 +24,7 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" />
       </head>
       <body className={`${inter.className} bg-blue-50 text-gray-800`}>
-        <Header />
-        <main className="mx-auto py-8 min-h-screen">
-          {children}
-        </main>
-        <footer className="py-4 text-center border-t mt-8 bg-white text-black">
-          © 2023 Takeuchi Portfolio. All rights reserved.
-        </footer>
+        {children}
       </body>
     </html>
   )

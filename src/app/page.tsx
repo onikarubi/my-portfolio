@@ -1,18 +1,11 @@
-import BasicInfo from '@/components/home/BasicInfo'
-import MainVisual from '@/components/home/MainVisual'
-import PersonalPR from '@/components/home/PersonalPR'
-import SkillsExperience from '@/components/home/SkillsExperience'
-import Image from 'next/image'
+"use client"
 
-export default function Home() {
+import dynamic from "next/dynamic"
+
+const Home = dynamic(() => import("@/components/home/Home"), { ssr: false })
+
+export default function page() {
   return (
-    <div>
-      <MainVisual />
-      <div className="container mx-auto p-4">
-        <PersonalPR />
-        <BasicInfo />
-        <SkillsExperience />
-      </div>
-    </div>
+    <Home />
   )
 }
