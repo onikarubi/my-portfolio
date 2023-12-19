@@ -22,9 +22,9 @@ const Header = () => {
       if (window.scrollY === 0) {
         setShowHeader(false);
       } else if (window.scrollY > lastScrollY) {
-        setShowHeader(false);
-      } else {
         setShowHeader(true);
+      } else {
+        setShowHeader(false);
       }
       setLastScrollY(window.scrollY);
     }
